@@ -1,0 +1,7 @@
+a modular node.js server based on Manuel Kiessling's tutorial at http://www.nodebeginner.org/
+
+needs a working node install
+(on Debian: sudo apt-get install node npm)
+
+to run the server: 
+node index.js
