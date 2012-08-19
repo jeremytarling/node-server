@@ -10,11 +10,12 @@ function start(response) {
     '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n'+ 
     '</head>\n'+
     '<body>\n'+
+    '<h1>simple NodeJS image uploader</h1>\n'+
     '<form action="/upload" enctype="multipart/form-data" method="post">\n'+
     '<input type="file" name="upload" multiple="multiple">\n'+
     '<input type="submit" value="upload file" />\n'+
     '</form>\n'+
-    '<p><a href="http://86.0.94.82/">home</a></p>\n'+
+    '<p><a href="http://86.0.94.82/">Raspi home</a></p>\n'+
     '</body>\n'+
     '</html>\n';
   
@@ -38,9 +39,9 @@ function upload(response, request) {
       }
     });
     response.writeHead(200, {"Content-Type": "text/html"});
-    response.write("<html><body><p>receved image</p>");
+    response.write("<html><body><h1>receved image:</h1>");
     response.write("<img src='/show' />");
-    response.write("<p><a href=\"/start\">back to start</a></p></body></html>")
+    response.write("<p><a href=\"/start\">upload another</a></p></body></html>")
     response.end();
   });
 }
